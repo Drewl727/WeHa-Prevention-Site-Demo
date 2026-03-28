@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact | West Hartford Prevention Partnership</title>
+  <meta name="description" content="Contact the West Hartford Prevention Partnership. Reach Prevention Coordinator Gretchen Levitz at 860-561-7571 or visit us at West Hartford Town Hall." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="Contact | West Hartford Prevention Partnership" />
+  <meta property="og:description" content="Get in touch with the West Hartford Prevention Partnership." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://drewl727.github.io/WeHa-Prevention-Site-Demo/contact.html" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231B3A5C'/><text x='16' y='22' font-size='18' font-family='sans-serif' font-weight='bold' fill='%23D4A843' text-anchor='middle'>W</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+
+  <div class="email-banner">
+    <p>Stay informed — <a href="https://lp.constantcontactpages.com/sl/iolsR2A" target="_blank" rel="noopener">sign up for email updates</a> from the Prevention Partnership.</p>
+  </div>
+
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-main">West Hartford</span>
+        <span class="logo-sub">Prevention Partnership</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="resources.html" class="btn btn-primary btn-sm">Get Help</a>
+        </div>
+      </nav>
+    </div>
+  </header>
+
+  <div class="page-hero">
+    <div class="container">
+      <div class="breadcrumb"><a href="index.html">Home</a> <span>/</span> Contact</div>
+      <h1>Contact Us</h1>
+      <p>Reach the Prevention Office at West Hartford Town Hall.</p>
+    </div>
+  </div>
+
+  <main>
+    <section class="section">
+      <div class="container">
+
+        <div class="notice" style="margin-bottom: 2rem;">
+          <strong>Need immediate help?</strong> If you or someone you know is in crisis, please call <strong>988</strong> (Suicide &amp; Crisis Lifeline) or <strong>911</strong>. <a href="resources.html">See all crisis resources.</a>
+        </div>
+
+        <div class="two-col">
+
+          <!-- CONTACT FORM -->
+          <div>
+            <div class="section-header">
+              <h2>Send a Message</h2>
+            </div>
+            <!-- Replace YOUR_FORM_ID with your Formspree form ID, or use action="mailto:gretchen.levitz@westhartfordct.gov" -->
+            <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+              <div class="form-group">
+                <label for="name">Your Name <span style="color: #c0392b;" aria-hidden="true">*</span></label>
+                <input type="text" id="name" name="name" required autocomplete="name" placeholder="First and last name" />
+              </div>
+              <div class="form-group">
+                <label for="email">Email Address <span style="color: #c0392b;" aria-hidden="true">*</span></label>
+                <input type="email" id="email" name="email" required autocomplete="email" placeholder="your@email.com" />
+              </div>
+              <div class="form-group">
+                <label for="phone">Phone Number <span style="font-weight: 400; color: var(--text-light);">(optional)</span></label>
+                <input type="tel" id="phone" name="phone" autocomplete="tel" placeholder="860-555-0000" />
+              </div>
+              <div class="form-group">
+                <label for="subject">Subject <span style="color: #c0392b;" aria-hidden="true">*</span></label>
+                <select id="subject" name="subject" required>
+                  <option value="" disabled selected>Select a topic...</option>
+                  <option value="Program Information">Program Information</option>
+                  <option value="PHACTT">PHACTT Parent Program</option>
+                  <option value="Youth Leadership Academy">Youth Leadership Academy</option>
+                  <option value="SMART Groups">SMART Recovery Groups</option>
+                  <option value="Events / Meetings">Events &amp; Meetings</option>
+                  <option value="Partnership Involvement">Getting Involved in the Partnership</option>
+                  <option value="Resources">Resources &amp; Referrals</option>
+                  <option value="Other">Other</option>
+                </select>
+              </div>
+              <div class="form-group">
+                <label for="message">Message <span style="color: #c0392b;" aria-hidden="true">*</span></label>
+                <textarea id="message" name="message" required placeholder="How can we help you?"></textarea>
+              </div>
+              <button type="submit" class="btn btn-primary">Send Message</button>
+            </form>
+            <p style="font-size: 0.82rem; color: var(--text-light); margin-top: 0.75rem;">
+              Your information is used only to respond to your inquiry and will not be shared or used for marketing purposes.
+            </p>
+          </div>
+
+          <!-- CONTACT INFO SIDEBAR -->
+          <div>
+
+            <div class="info-box" style="margin-bottom: 1.25rem;">
+              <h3>Prevention Office</h3>
+              <div class="contact-line"><strong>Name</strong> Gretchen Levitz</div>
+              <div class="contact-line"><strong>Title</strong> Prevention Coordinator</div>
+              <div class="contact-line"><strong>Phone</strong> <a href="tel:8605617571">860-561-7571</a></div>
+              <div class="contact-line"><strong>Email</strong> <a href="mailto:gretchen.levitz@westhartfordct.gov" style="word-break: break-all;">gretchen.levitz@westhartfordct.gov</a></div>
+            </div>
+
+            <div class="info-box" style="margin-bottom: 1.25rem;">
+              <h3>Office Location</h3>
+              <p><strong>West Hartford Town Hall</strong><br>Social Services Department<br>50 South Main Street<br>West Hartford, CT 06107</p>
+              <p style="margin-top: 0.75rem; font-size: 0.82rem; color: var(--text-light);">Free parking is available in the Town Hall parking lot on South Main Street. The Social Services office is located on the ground floor.</p>
+            </div>
+
+            <div class="info-box" style="margin-bottom: 1.25rem;">
+              <h3>Office Hours</h3>
+              <p>Monday – Friday<br>8:30 AM – 4:30 PM</p>
+              <p style="margin-top: 0.5rem; font-size: 0.82rem; color: var(--text-light);">Hours may vary on Town holidays. Call ahead to confirm.</p>
+            </div>
+
+            <div class="info-box">
+              <h3>Email Newsletter</h3>
+              <p>Sign up to receive meeting reminders and program announcements directly to your inbox.</p>
+              <a href="https://lp.constantcontactpages.com/sl/iolsR2A" target="_blank" rel="noopener" class="btn btn-accent btn-sm" style="margin-top: 0.75rem;">Sign Up &#8599;</a>
+            </div>
+
+          </div>
+        </div>
+
+        <!-- MAP -->
+        <div style="margin-top: 3rem;">
+          <div class="section-header">
+            <h2>Find Us</h2>
+            <p>West Hartford Town Hall — 50 South Main Street, West Hartford, CT 06107</p>
+          </div>
+          <div class="map-wrapper">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2974.123456789!2d-72.74601!3d41.76018!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89e7b5e1234abcd%3A0xabcdef1234567!2s50+S+Main+St%2C+West+Hartford%2C+CT+06107!5e0!3m2!1sen!2sus!4v1700000000000!5m2!1sen!2sus"
+              height="360"
+              style="border:0;"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+              title="West Hartford Town Hall map">
+            </iframe>
+          </div>
+        </div>
+
+      </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>West Hartford Prevention Partnership</h3>
+        <p>A program of the Town of West Hartford Social Services Department, dedicated to promoting mental health and preventing substance misuse across the lifespan.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.westhartfordct.gov/town-departments/social-services/prevention" target="_blank" rel="noopener">Town Prevention Page &#8599;</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><strong style="color: #fff;">Gretchen Levitz</strong><br>Prevention Coordinator</p>
+        <p><a href="tel:8605617571">860-561-7571</a></p>
+        <p><a href="mailto:gretchen.levitz@westhartfordct.gov">gretchen.levitz@westhartfordct.gov</a></p>
+        <p style="margin-top: 0.75rem;">50 South Main Street<br>West Hartford, CT 06107</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="events.html">Events &amp; Meetings</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="https://www.westhartfordct.gov" target="_blank" rel="noopener">Town of West Hartford &#8599;</a></li>
+          <li><a href="https://lp.constantcontactpages.com/sl/iolsR2A" target="_blank" rel="noopener">Email Sign-Up &#8599;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 West Hartford Prevention Partnership &mdash; Town of West Hartford, CT &bull; <a href="https://www.westhartfordct.gov" target="_blank" rel="noopener">westhartfordct.gov</a></p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -3,52 +3,270 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WeHa Prevention</title>
+  <title>West Hartford Prevention Partnership</title>
+  <meta name="description" content="The West Hartford Prevention Partnership promotes optimal health and well-being by fostering community-wide events, activities, and awareness campaigns about mental health and substance misuse prevention." />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content="West Hartford Prevention Partnership" />
+  <meta property="og:description" content="Promoting mental health and preventing substance misuse across the lifespan in West Hartford, CT." />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://drewl727.github.io/WeHa-Prevention-Site-Demo/" />
+
+  <!-- Favicon placeholder -->
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231B3A5C'/><text x='16' y='22' font-size='18' font-family='sans-serif' font-weight='bold' fill='%23D4A843' text-anchor='middle'>W</text></svg>" />
+
+  <!-- Google Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
-  <header>
-    <nav>
-      <div class="logo">WeHa Prevention</div>
-      <ul>
-        <li><a href="#about">About</a></li>
-        <li><a href="#programs">Programs</a></li>
-        <li><a href="#resources">Resources</a></li>
-        <li><a href="#contact">Contact</a></li>
-      </ul>
-    </nav>
+
+  <!-- EMAIL SIGN-UP BANNER -->
+  <div class="email-banner">
+    <p>Stay informed — <a href="https://lp.constantcontactpages.com/sl/iolsR2A" target="_blank" rel="noopener">sign up for email updates</a> from the Prevention Partnership.</p>
+  </div>
+
+  <!-- HEADER -->
+  <header class="site-header">
+    <div class="header-inner">
+      <a href="index.html" class="site-logo">
+        <span class="logo-main">West Hartford</span>
+        <span class="logo-sub">Prevention Partnership</span>
+      </a>
+      <button class="nav-toggle" aria-label="Open navigation" aria-expanded="false">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+      <nav class="site-nav" aria-label="Main navigation">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="events.html">Events</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a href="resources.html" class="btn btn-primary btn-sm">Get Help</a>
+        </div>
+      </nav>
+    </div>
   </header>
 
   <main>
+
+    <!-- HERO -->
     <section class="hero">
-      <h1>WeHa Prevention</h1>
-      <p>Building healthier, safer communities together.</p>
-      <a href="#about" class="btn">Learn More</a>
+      <div class="container">
+        <h1>West Hartford Prevention Partnership</h1>
+        <div class="hero-accent"></div>
+        <p>The West Hartford Prevention Council and Prevention Partnership promote optimal health and well-being by fostering community-wide events, activities, and awareness campaigns about the importance of promoting mental health and preventing substance misuse across the lifespan.</p>
+        <div class="hero-actions">
+          <a href="programs.html" class="btn btn-accent">Our Programs</a>
+          <a href="resources.html" class="btn btn-outline" style="border-color: rgba(255,255,255,0.6); color: #fff;">Find Resources</a>
+        </div>
+      </div>
     </section>
 
-    <section id="about">
-      <h2>About Us</h2>
-      <p>We are dedicated to prevention education and community wellness.</p>
+    <!-- PROGRAMS GRID -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Our Programs</h2>
+          <p>The Prevention Partnership supports a range of initiatives serving West Hartford residents of all ages.</p>
+        </div>
+        <div class="card-grid">
+
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon">EW</div>
+              <h3>Elevate WeHa</h3>
+            </div>
+            <div class="card-body">
+              <p>A community wellness initiative focused on reducing stigma, building connection, and promoting mental health and well-being across West Hartford.</p>
+              <a href="programs.html#elevate" class="btn btn-outline btn-sm">Learn More</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon">AT</div>
+              <h3>Able Table</h3>
+            </div>
+            <div class="card-body">
+              <p>A sub-initiative of Elevate WeHa that brings community members together around shared meals to foster connection and reduce isolation.</p>
+              <a href="programs.html#able-table" class="btn btn-outline btn-sm">Learn More</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon">PH</div>
+              <h3>PHACTT</h3>
+            </div>
+            <div class="card-body">
+              <p>Parents Helping Adolescents &amp; Children Through Tough Times — education and support for parents navigating adolescent mental health and substance use challenges.</p>
+              <a href="programs.html#phactt" class="btn btn-outline btn-sm">Learn More</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon">YLA</div>
+              <h3>Youth Leadership Academy</h3>
+            </div>
+            <div class="card-body">
+              <p>A youth development program that empowers West Hartford teens to become leaders and advocates for healthy, substance-free communities.</p>
+              <a href="programs.html#yla" class="btn btn-outline btn-sm">Learn More</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon">SG</div>
+              <h3>SMART Groups</h3>
+            </div>
+            <div class="card-body">
+              <p>Science-based self-management and recovery support groups open to West Hartford residents seeking peer support for addiction and behavioral challenges.</p>
+              <a href="programs.html#smart" class="btn btn-outline btn-sm">Learn More</a>
+            </div>
+          </div>
+
+          <div class="card">
+            <div class="card-top">
+              <div class="card-icon">RFC</div>
+              <h3>Recovery Friendly Community</h3>
+            </div>
+            <div class="card-body">
+              <p>West Hartford's commitment to being a community where individuals in recovery are welcomed, supported, and able to fully participate in civic life.</p>
+              <a href="programs.html#recovery" class="btn btn-outline btn-sm">Learn More</a>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
-    <section id="programs">
-      <h2>Our Programs</h2>
-      <p>Explore our prevention programs and initiatives.</p>
+    <!-- UPCOMING EVENTS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="two-col">
+          <div>
+            <div class="section-header">
+              <h2>Upcoming Meetings</h2>
+              <p>Both groups meet monthly at West Hartford Town Hall.</p>
+            </div>
+            <div class="event-list">
+
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="month">Apr</span>
+                  <span class="day">17</span>
+                </div>
+                <div class="event-info">
+                  <h4>Prevention Partnership Meeting</h4>
+                  <p>Monthly meeting of the West Hartford Prevention Partnership — all community members welcome.</p>
+                  <div class="event-meta">
+                    <span>4:00 PM</span>
+                    <span>Town Hall, Room 217</span>
+                    <span>50 South Main St, West Hartford</span>
+                  </div>
+                </div>
+              </div>
+
+              <div class="event-item">
+                <div class="event-date">
+                  <span class="month">Apr</span>
+                  <span class="day">17</span>
+                </div>
+                <div class="event-info">
+                  <h4>Prevention Council Meeting</h4>
+                  <p>Monthly meeting of the appointed Prevention Council, which advises the Town Council on substance misuse prevention policy.</p>
+                  <div class="event-meta">
+                    <span>5:00 PM</span>
+                    <span>Town Hall, Room 217</span>
+                    <span>50 South Main St, West Hartford</span>
+                  </div>
+                </div>
+              </div>
+
+            </div>
+            <p style="margin-top: 1.25rem;">
+              <a href="events.html" class="btn btn-primary btn-sm">View All Events</a>
+            </p>
+          </div>
+
+          <!-- CONTACT SIDEBAR -->
+          <div>
+            <div class="info-box">
+              <h3>Contact the Prevention Office</h3>
+              <div class="contact-line"><strong>Coordinator</strong> Gretchen Levitz</div>
+              <div class="contact-line"><strong>Phone</strong> <a href="tel:8605617571">860-561-7571</a></div>
+              <div class="contact-line"><strong>Email</strong> <a href="mailto:gretchen.levitz@westhartfordct.gov">gretchen.levitz@westhartfordct.gov</a></div>
+              <div class="contact-line"><strong>Office</strong> West Hartford Town Hall<br>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;50 South Main Street</div>
+              <p style="margin-top: 1.25rem; font-size: 0.85rem;">
+                <a href="contact.html" class="btn btn-primary btn-sm">Send a Message</a>
+              </p>
+            </div>
+
+            <div class="info-box" style="margin-top: 1.25rem;">
+              <h3>Staff</h3>
+              <p>Gretchen Levitz<br><span style="font-size: 0.82rem; color: #5a5a5a;">Prevention Coordinator</span></p>
+              <p>Maeve D'Arcy<br><span style="font-size: 0.82rem; color: #5a5a5a;">Clerk II</span></p>
+              <p>Barbara Thomas<br><span style="font-size: 0.82rem; color: #5a5a5a;">Clerk II</span></p>
+            </div>
+          </div>
+        </div>
+      </div>
     </section>
 
-    <section id="resources">
-      <h2>Resources</h2>
-      <p>Access helpful resources and support information.</p>
+    <!-- EMAIL SIGN-UP CALLOUT -->
+    <section class="section" style="padding: 2rem 0;">
+      <div class="container" style="text-align: center;">
+        <h2 style="margin-bottom: 0.5rem;">Stay Connected</h2>
+        <p style="color: var(--text-light); max-width: 500px; margin: 0 auto 1.25rem;">Sign up for email updates to receive news about programs, meetings, and community events.</p>
+        <a href="https://lp.constantcontactpages.com/sl/iolsR2A" target="_blank" rel="noopener" class="btn btn-accent">Sign Up for Email Updates</a>
+      </div>
     </section>
 
-    <section id="contact">
-      <h2>Contact Us</h2>
-      <p>Get in touch with our team.</p>
-    </section>
   </main>
 
-  <footer>
-    <p>&copy; 2026 WeHa Prevention. All rights reserved.</p>
+  <!-- FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-inner">
+      <div class="footer-col">
+        <h3>West Hartford Prevention Partnership</h3>
+        <p>A program of the Town of West Hartford Social Services Department, dedicated to promoting mental health and preventing substance misuse across the lifespan.</p>
+        <p style="margin-top: 0.75rem;"><a href="https://www.westhartfordct.gov/town-departments/social-services/prevention" target="_blank" rel="noopener">Town Prevention Page &#8599;</a></p>
+      </div>
+      <div class="footer-col">
+        <h4>Contact</h4>
+        <p><strong style="color: #fff;">Gretchen Levitz</strong><br>Prevention Coordinator</p>
+        <p><a href="tel:8605617571">860-561-7571</a></p>
+        <p><a href="mailto:gretchen.levitz@westhartfordct.gov">gretchen.levitz@westhartfordct.gov</a></p>
+        <p style="margin-top: 0.75rem;">50 South Main Street<br>West Hartford, CT 06107</p>
+      </div>
+      <div class="footer-col">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="programs.html">Programs</a></li>
+          <li><a href="events.html">Events &amp; Meetings</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="about.html">About Us</a></li>
+          <li><a href="https://www.westhartfordct.gov" target="_blank" rel="noopener">Town of West Hartford &#8599;</a></li>
+          <li><a href="https://lp.constantcontactpages.com/sl/iolsR2A" target="_blank" rel="noopener">Email Sign-Up &#8599;</a></li>
+        </ul>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; 2026 West Hartford Prevention Partnership &mdash; Town of West Hartford, CT &bull; <a href="https://www.westhartfordct.gov" target="_blank" rel="noopener">westhartfordct.gov</a></p>
+    </div>
   </footer>
+
+  <script src="script.js"></script>
 </body>
 </html>
