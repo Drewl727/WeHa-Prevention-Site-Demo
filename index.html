@@ -24,6 +24,9 @@
 </head>
 <body>
 
+  <!-- ANNOUNCEMENT BANNER (managed via CMS) -->
+  <div id="announcement-banner" style="display:none; background: #1B3A5C; color: #fff; text-align: center; padding: 0.6rem 1.5rem; font-size: 0.875rem; font-weight: 600;"></div>
+
   <!-- EMAIL SIGN-UP BANNER -->
   <div class="email-banner">
     <p>Stay informed — <a href="https://lp.constantcontactpages.com/sl/iolsR2A" target="_blank" rel="noopener">sign up for email updates</a> from the Prevention Partnership.</p>
@@ -160,41 +163,8 @@
               <h2>Upcoming Meetings</h2>
               <p>Both groups meet monthly at West Hartford Town Hall.</p>
             </div>
-            <div class="event-list">
-
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="month">Apr</span>
-                  <span class="day">17</span>
-                </div>
-                <div class="event-info">
-                  <h4>Prevention Partnership Meeting</h4>
-                  <p>Monthly meeting of the West Hartford Prevention Partnership — all community members welcome.</p>
-                  <div class="event-meta">
-                    <span>4:00 PM</span>
-                    <span>Town Hall, Room 217</span>
-                    <span>50 South Main St, West Hartford</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="month">Apr</span>
-                  <span class="day">17</span>
-                </div>
-                <div class="event-info">
-                  <h4>Prevention Council Meeting</h4>
-                  <p>Monthly meeting of the appointed Prevention Council, which advises the Town Council on substance misuse prevention policy.</p>
-                  <div class="event-meta">
-                    <span>5:00 PM</span>
-                    <span>Town Hall, Room 217</span>
-                    <span>50 South Main St, West Hartford</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+            <!-- Events loaded dynamically from data/events.json -->
+            <div id="home-events" class="event-list"></div>
             <p style="margin-top: 1.25rem;">
               <a href="events.html" class="btn btn-primary btn-sm">View All Events</a>
             </p>
@@ -268,5 +238,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>loadEvents('home-events', 3);</script>
 </body>
 </html>

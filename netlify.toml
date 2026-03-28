@@ -1,0 +1,19 @@
+[build]
+  publish = "."
+
+# Required for Decap CMS / Netlify Identity
+[[plugins]]
+  package = "@netlify/plugin-identity-service"
+
+[[headers]]
+  for = "/admin/*"
+  [headers.values]
+    X-Robots-Tag = "noindex"
+    X-Frame-Options = "SAMEORIGIN"
+    X-XSS-Protection = "1; mode=block"
+
+[[headers]]
+  for = "/*"
+  [headers.values]
+    X-Content-Type-Options = "nosniff"
+    Referrer-Policy = "strict-origin-when-cross-origin"

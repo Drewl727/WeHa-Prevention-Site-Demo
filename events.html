@@ -72,99 +72,8 @@
             <div class="section-header">
               <h2>Upcoming Events</h2>
             </div>
-            <div class="event-list">
-
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="month">Apr</span>
-                  <span class="day">17</span>
-                </div>
-                <div class="event-info">
-                  <h4>Prevention Partnership Meeting</h4>
-                  <p>Monthly gathering of the West Hartford Prevention Partnership. Community members, partners, and interested residents are welcome to attend.</p>
-                  <div class="event-meta">
-                    <span>4:00 PM</span>
-                    <span>Town Hall, Room 217</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="month">Apr</span>
-                  <span class="day">17</span>
-                </div>
-                <div class="event-info">
-                  <h4>Prevention Council Meeting</h4>
-                  <p>Monthly meeting of the Prevention Council, an appointed advisory body to the West Hartford Town Council on substance misuse prevention.</p>
-                  <div class="event-meta">
-                    <span>5:00 PM</span>
-                    <span>Town Hall, Room 217</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="month">May</span>
-                  <span class="day">15</span>
-                </div>
-                <div class="event-info">
-                  <h4>Prevention Partnership Meeting</h4>
-                  <p>Monthly gathering of the West Hartford Prevention Partnership.</p>
-                  <div class="event-meta">
-                    <span>4:00 PM</span>
-                    <span>Town Hall, Room 217</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="month">May</span>
-                  <span class="day">15</span>
-                </div>
-                <div class="event-info">
-                  <h4>Prevention Council Meeting</h4>
-                  <p>Monthly meeting of the Prevention Council.</p>
-                  <div class="event-meta">
-                    <span>5:00 PM</span>
-                    <span>Town Hall, Room 217</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="month">Jun</span>
-                  <span class="day">19</span>
-                </div>
-                <div class="event-info">
-                  <h4>Prevention Partnership Meeting</h4>
-                  <p>Monthly gathering of the West Hartford Prevention Partnership.</p>
-                  <div class="event-meta">
-                    <span>4:00 PM</span>
-                    <span>Town Hall, Room 217</span>
-                  </div>
-                </div>
-              </div>
-
-              <div class="event-item">
-                <div class="event-date">
-                  <span class="month">Jun</span>
-                  <span class="day">19</span>
-                </div>
-                <div class="event-info">
-                  <h4>Prevention Council Meeting</h4>
-                  <p>Monthly meeting of the Prevention Council.</p>
-                  <div class="event-meta">
-                    <span>5:00 PM</span>
-                    <span>Town Hall, Room 217</span>
-                  </div>
-                </div>
-              </div>
-
-            </div>
+            <!-- Events loaded dynamically from data/events.json -->
+            <div id="all-events" class="event-list"></div>
           </div>
 
           <!-- SIDEBAR -->
@@ -255,5 +164,6 @@
   </footer>
 
   <script src="script.js"></script>
+  <script>loadEvents('all-events');</script>
 </body>
 </html>

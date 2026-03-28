@@ -1,0 +1,103 @@
+backend:
+  name: git-gateway
+  branch: main
+
+# Netlify Identity handles login — enable via Netlify dashboard > Identity
+media_folder: "images/uploads"
+public_folder: "/images/uploads"
+
+# Site display info
+site_url: /
+logo_url: /
+
+collections:
+
+  # ─────────────────────────────────────────
+  # EVENTS — Add, edit, or remove events
+  # ─────────────────────────────────────────
+  - name: "events"
+    label: "Events & Meetings"
+    file: "data/events.json"
+    description: "Add, edit, or remove upcoming events and meetings. Changes go live automatically."
+    fields:
+      - label: "Events"
+        name: "events"
+        widget: "list"
+        summary: "{{fields.title}} — {{fields.date}} at {{fields.time}}"
+        fields:
+          - label: "Event Title"
+            name: "title"
+            widget: "string"
+            hint: "e.g. Prevention Partnership Meeting"
+
+          - label: "Date"
+            name: "date"
+            widget: "date"
+            format: "YYYY-MM-DD"
+
+          - label: "Time"
+            name: "time"
+            widget: "string"
+            hint: "e.g. 4:00 PM"
+
+          - label: "Location Name"
+            name: "location"
+            widget: "string"
+            hint: "e.g. Town Hall, Room 217"
+
+          - label: "Street Address"
+            name: "address"
+            widget: "string"
+            hint: "e.g. 50 South Main Street, West Hartford, CT"
+
+          - label: "Event Type"
+            name: "type"
+            widget: "select"
+            options:
+              - "Prevention Partnership"
+              - "Prevention Council"
+              - "Community Event"
+              - "Able Table"
+              - "Youth Leadership Academy"
+              - "SMART Recovery"
+              - "Other"
+
+          - label: "Description"
+            name: "description"
+            widget: "text"
+            hint: "A brief description shown on the events page."
+
+  # ─────────────────────────────────────────
+  # ANNOUNCEMENTS — Homepage banner notices
+  # ─────────────────────────────────────────
+  - name: "settings"
+    label: "Site Settings"
+    file: "data/settings.json"
+    description: "Update the homepage announcement banner."
+    fields:
+      - label: "Announcement Banner"
+        name: "announcement"
+        widget: "object"
+        fields:
+          - label: "Show Banner?"
+            name: "enabled"
+            widget: "boolean"
+            default: false
+            hint: "Turn the announcement banner on or off."
+
+          - label: "Banner Message"
+            name: "message"
+            widget: "string"
+            hint: "Short message to show at the top of the homepage. Leave blank if not needed."
+
+          - label: "Link Text"
+            name: "link_text"
+            widget: "string"
+            required: false
+            hint: "Optional — text for a link in the banner, e.g. 'Learn more'"
+
+          - label: "Link URL"
+            name: "link_url"
+            widget: "string"
+            required: false
+            hint: "Optional — URL the link points to"

@@ -1,0 +1,67 @@
+{
+  "events": [
+    {
+      "title": "Prevention Partnership Meeting",
+      "date": "2026-04-17",
+      "time": "4:00 PM",
+      "location": "Town Hall, Room 217",
+      "address": "50 South Main Street, West Hartford, CT",
+      "type": "Prevention Partnership",
+      "description": "Monthly gathering of the West Hartford Prevention Partnership. Community members, partners, and interested residents are welcome to attend."
+    },
+    {
+      "title": "Prevention Council Meeting",
+      "date": "2026-04-17",
+      "time": "5:00 PM",
+      "location": "Town Hall, Room 217",
+      "address": "50 South Main Street, West Hartford, CT",
+      "type": "Prevention Council",
+      "description": "Monthly meeting of the Prevention Council, an appointed advisory body to the West Hartford Town Council on substance misuse prevention."
+    },
+    {
+      "title": "Prevention Partnership Meeting",
+      "date": "2026-05-15",
+      "time": "4:00 PM",
+      "location": "Town Hall, Room 217",
+      "address": "50 South Main Street, West Hartford, CT",
+      "type": "Prevention Partnership",
+      "description": "Monthly gathering of the West Hartford Prevention Partnership."
+    },
+    {
+      "title": "Prevention Council Meeting",
+      "date": "2026-05-15",
+      "time": "5:00 PM",
+      "location": "Town Hall, Room 217",
+      "address": "50 South Main Street, West Hartford, CT",
+      "type": "Prevention Council",
+      "description": "Monthly meeting of the Prevention Council."
+    },
+    {
+      "title": "Able Table Community Lunch",
+      "date": "2026-05-08",
+      "time": "12:00 PM",
+      "location": "TBD — West Hartford",
+      "address": "West Hartford, CT",
+      "type": "Community Event",
+      "description": "An Elevate WeHa Able Table community gathering. Open to all West Hartford residents. Location details to be announced — sign up for email updates to receive the address."
+    },
+    {
+      "title": "Prevention Partnership Meeting",
+      "date": "2026-06-19",
+      "time": "4:00 PM",
+      "location": "Town Hall, Room 217",
+      "address": "50 South Main Street, West Hartford, CT",
+      "type": "Prevention Partnership",
+      "description": "Monthly gathering of the West Hartford Prevention Partnership."
+    },
+    {
+      "title": "Prevention Council Meeting",
+      "date": "2026-06-19",
+      "time": "5:00 PM",
+      "location": "Town Hall, Room 217",
+      "address": "50 South Main Street, West Hartford, CT",
+      "type": "Prevention Council",
+      "description": "Monthly meeting of the Prevention Council."
+    }
+  ]
+}

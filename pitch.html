@@ -1,0 +1,664 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Site Proposal | West Hartford Prevention Partnership</title>
+  <meta name="robots" content="noindex, nofollow" />
+
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><rect width='32' height='32' rx='4' fill='%231B3A5C'/><text x='16' y='22' font-size='18' font-family='sans-serif' font-weight='bold' fill='%23D4A843' text-anchor='middle'>W</text></svg>" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+
+  <style>
+    /* Pitch-page-specific overrides */
+    .pitch-hero {
+      background: var(--navy);
+      padding: 4rem 0 3.5rem;
+      text-align: center;
+    }
+    .pitch-hero h1 { color: #fff; font-size: 2rem; margin-bottom: 0.5rem; }
+    .pitch-hero .sub { color: rgba(255,255,255,0.75); font-size: 1rem; }
+    .pitch-hero .hero-accent { margin: 1rem auto; }
+
+    .pitch-label {
+      display: inline-block;
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1.5px;
+      padding: 0.2rem 0.6rem;
+      border-radius: 2px;
+      margin-bottom: 0.75rem;
+    }
+
+    .comparison-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 1.5rem;
+    }
+
+    .comparison-col {
+      border-radius: var(--radius);
+      padding: 1.5rem;
+    }
+
+    .comparison-col.before {
+      background: #fff8f8;
+      border: 1px solid #f0c0c0;
+    }
+
+    .comparison-col.after {
+      background: #f0f7ff;
+      border: 1px solid #b0cfee;
+    }
+
+    .comparison-col h3 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+      padding-bottom: 0.5rem;
+      border-bottom: 2px solid currentColor;
+    }
+
+    .comparison-col.before h3 { color: #a00; border-color: #f0c0c0; }
+    .comparison-col.after  h3 { color: var(--navy); border-color: #b0cfee; }
+
+    .check-list { list-style: none; }
+    .check-list li {
+      padding: 0.3rem 0;
+      font-size: 0.875rem;
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .check-list li::before {
+      content: attr(data-marker);
+      font-size: 0.9rem;
+      flex-shrink: 0;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .feature-card {
+      background: var(--white);
+      border: 1px solid var(--gray-mid);
+      border-radius: var(--radius);
+      padding: 1.5rem;
+      box-shadow: var(--shadow);
+    }
+
+    .feature-icon {
+      width: 44px;
+      height: 44px;
+      border-radius: var(--radius);
+      background: var(--navy);
+      color: var(--gold);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.25rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h4 { margin-bottom: 0.4rem; }
+    .feature-card p  { font-size: 0.875rem; color: var(--text-light); margin: 0; }
+
+    .tier-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+      gap: 1.5rem;
+    }
+
+    .tier-card {
+      background: var(--white);
+      border: 2px solid var(--gray-mid);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow);
+    }
+
+    .tier-card.featured {
+      border-color: var(--gold);
+    }
+
+    .tier-header {
+      background: var(--navy);
+      padding: 1.25rem 1.5rem;
+      text-align: center;
+    }
+
+    .tier-card.featured .tier-header {
+      background: var(--gold);
+    }
+
+    .tier-header h3 {
+      color: #fff;
+      font-size: 1.05rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .tier-card.featured .tier-header h3 {
+      color: var(--navy-dark);
+    }
+
+    .tier-price {
+      color: rgba(255,255,255,0.85);
+      font-size: 2rem;
+      font-weight: 700;
+      line-height: 1;
+    }
+
+    .tier-card.featured .tier-price {
+      color: var(--navy-dark);
+    }
+
+    .tier-price sup { font-size: 1rem; vertical-align: super; }
+    .tier-price span { font-size: 0.85rem; font-weight: 400; opacity: 0.8; }
+
+    .tier-body { padding: 1.5rem; }
+
+    .tier-features { list-style: none; margin-bottom: 1.25rem; }
+    .tier-features li {
+      font-size: 0.875rem;
+      padding: 0.3rem 0;
+      border-bottom: 1px solid var(--gray-light);
+      display: flex;
+      align-items: baseline;
+      gap: 0.5rem;
+    }
+    .tier-features li:last-child { border-bottom: none; }
+    .tier-features li::before { content: "✓"; color: var(--gold-dark); font-weight: 700; flex-shrink: 0; }
+
+    .badge-recommended {
+      display: inline-block;
+      background: var(--navy);
+      color: #fff;
+      font-size: 0.72rem;
+      font-weight: 700;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      padding: 0.15rem 0.5rem;
+      border-radius: 2px;
+      margin-bottom: 0.25rem;
+    }
+
+    .step-list { counter-reset: steps; }
+    .step-item {
+      display: flex;
+      gap: 1.25rem;
+      margin-bottom: 1.5rem;
+      align-items: flex-start;
+    }
+    .step-num {
+      counter-increment: steps;
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: var(--navy);
+      color: var(--white);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 1rem;
+      flex-shrink: 0;
+    }
+    .step-content h4 { margin-bottom: 0.25rem; }
+    .step-content p  { font-size: 0.9rem; color: var(--text-light); margin: 0; }
+
+    .cms-demo {
+      background: var(--navy-dark);
+      border-radius: var(--radius);
+      overflow: hidden;
+      box-shadow: var(--shadow-hover);
+    }
+    .cms-demo-bar {
+      background: #0f1f30;
+      padding: 0.6rem 1rem;
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+    }
+    .cms-demo-bar .dot {
+      width: 10px; height: 10px; border-radius: 50%;
+    }
+    .cms-demo-bar .dot-r { background: #ff5f57; }
+    .cms-demo-bar .dot-y { background: #febc2e; }
+    .cms-demo-bar .dot-g { background: #28c840; }
+    .cms-demo-bar .url {
+      background: rgba(255,255,255,0.08);
+      color: rgba(255,255,255,0.6);
+      font-size: 0.78rem;
+      padding: 0.2rem 0.75rem;
+      border-radius: 3px;
+      margin-left: 0.5rem;
+      font-family: monospace;
+    }
+    .cms-demo-inner {
+      display: grid;
+      grid-template-columns: 200px 1fr;
+    }
+    .cms-sidebar {
+      background: #162940;
+      padding: 1rem;
+      min-height: 280px;
+    }
+    .cms-sidebar p {
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.4);
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 0.5rem;
+    }
+    .cms-nav-item {
+      padding: 0.5rem 0.75rem;
+      border-radius: 3px;
+      font-size: 0.82rem;
+      color: rgba(255,255,255,0.75);
+      margin-bottom: 0.25rem;
+      cursor: pointer;
+    }
+    .cms-nav-item.active {
+      background: var(--gold);
+      color: var(--navy-dark);
+      font-weight: 700;
+    }
+    .cms-content {
+      padding: 1.5rem;
+    }
+    .cms-content h4 {
+      color: #fff;
+      font-size: 0.95rem;
+      margin-bottom: 1rem;
+    }
+    .cms-field {
+      margin-bottom: 0.875rem;
+    }
+    .cms-field label {
+      display: block;
+      font-size: 0.72rem;
+      color: rgba(255,255,255,0.5);
+      text-transform: uppercase;
+      letter-spacing: 0.5px;
+      margin-bottom: 0.3rem;
+    }
+    .cms-field input, .cms-field select {
+      background: rgba(255,255,255,0.08);
+      border: 1px solid rgba(255,255,255,0.15);
+      border-radius: 3px;
+      padding: 0.4rem 0.75rem;
+      color: #fff;
+      font-size: 0.85rem;
+      width: 100%;
+      font-family: var(--font);
+    }
+    .cms-save-row {
+      display: flex;
+      gap: 0.5rem;
+      margin-top: 1rem;
+    }
+    .cms-btn {
+      padding: 0.4rem 1rem;
+      border-radius: 3px;
+      font-size: 0.82rem;
+      font-weight: 700;
+      border: none;
+      cursor: pointer;
+    }
+    .cms-btn-save { background: var(--gold); color: var(--navy-dark); }
+    .cms-btn-cancel { background: rgba(255,255,255,0.1); color: rgba(255,255,255,0.7); }
+
+    @media (max-width: 768px) {
+      .comparison-grid { grid-template-columns: 1fr; }
+      .cms-demo-inner  { grid-template-columns: 1fr; }
+      .cms-sidebar     { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- PITCH HERO -->
+  <div class="pitch-hero">
+    <div class="container">
+      <div class="pitch-label">Proposal &mdash; Prepared for Gretchen Levitz</div>
+      <h1>A Standalone Website for the<br>West Hartford Prevention Partnership</h1>
+      <div class="hero-accent"></div>
+      <p class="sub">What it would look like &bull; How you'd manage it &bull; What ongoing support costs</p>
+    </div>
+  </div>
+
+  <main>
+
+    <!-- THE PROBLEM -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>The Problem with Being Buried</h2>
+          <p>Right now, the Prevention Partnership lives four levels deep inside westhartfordct.gov — hard for residents to find, impossible to update quickly.</p>
+        </div>
+
+        <div class="comparison-grid">
+          <div class="comparison-col before">
+            <h3>Current: Buried in Town Site</h3>
+            <ul class="check-list">
+              <li data-marker="✗">4+ clicks to reach prevention content from the town homepage</li>
+              <li data-marker="✗">No dedicated URL people can remember or share</li>
+              <li data-marker="✗">Program descriptions are thin and hard to update</li>
+              <li data-marker="✗">No events calendar — parents and community members don't know when meetings are</li>
+              <li data-marker="✗">Resources are not organized by audience (parents, teens, seniors)</li>
+              <li data-marker="✗">Content changes require going through Town IT or web team</li>
+              <li data-marker="✗">Mobile experience is not optimized for a prevention audience</li>
+              <li data-marker="✗">No email sign-up prominently integrated</li>
+            </ul>
+          </div>
+          <div class="comparison-col after">
+            <h3>This Site: Dedicated &amp; Accessible</h3>
+            <ul class="check-list">
+              <li data-marker="✓">Direct URL — shareable at events, on flyers, in emails</li>
+              <li data-marker="✓">Homepage shows who you are, what you do, and when meetings are — immediately</li>
+              <li data-marker="✓">Full program pages with real descriptions for each initiative</li>
+              <li data-marker="✓">Live events calendar you can update yourself — no IT ticket needed</li>
+              <li data-marker="✓">Resources page organized for people who may be in distress — crisis hotlines front and center</li>
+              <li data-marker="✓">Email sign-up integrated throughout</li>
+              <li data-marker="✓">Mobile-first — works on every phone</li>
+              <li data-marker="✓">Consistent with town branding but distinct and professional</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- WHAT'S INCLUDED -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>What's Included in This Site</h2>
+        </div>
+        <div class="feature-grid">
+
+          <div class="feature-card">
+            <div class="feature-icon">&#127968;</div>
+            <h4>6 Full Pages</h4>
+            <p>Home, Programs, Events, Resources, About, and Contact — each purpose-built for different visitor needs.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">&#128197;</div>
+            <h4>Live Events Calendar</h4>
+            <p>Upcoming meetings update automatically. You add or remove events through a simple form — no code, no IT tickets.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">&#128241;</div>
+            <h4>Mobile-Responsive Design</h4>
+            <p>Works on every phone and tablet. Navigation collapses to a clean menu on small screens.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">&#128226;</div>
+            <h4>Crisis Resources Page</h4>
+            <p>988, Crisis Text Line, CT BH Access Line, and more — organized so someone in distress can find help in seconds.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">&#128231;</div>
+            <h4>Email Sign-Up Integrated</h4>
+            <p>Your existing Constant Contact sign-up link is woven throughout — homepage banner, events page, footer, and more.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">&#128269;</div>
+            <h4>Search Engine Ready</h4>
+            <p>Proper meta tags, page titles, and Open Graph data so the site shows up when West Hartford residents search for prevention resources.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">&#128203;</div>
+            <h4>Contact Form</h4>
+            <p>Simple contact form that sends inquiries directly to your email — with topic categories so you know what each message is about.</p>
+          </div>
+
+          <div class="feature-card">
+            <div class="feature-icon">&#128205;</div>
+            <h4>Google Maps Embed</h4>
+            <p>Town Hall location on the Contact page so visitors can easily get directions to meetings.</p>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- CMS / BACKEND DEMO -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>You Control the Content — No Code Needed</h2>
+          <p>A simple content management panel lives at <code style="background:var(--gray-light);padding:.1rem .4rem;border-radius:3px;font-size:.9rem;">/admin</code> — you log in with your email and manage events through a clean web form.</p>
+        </div>
+
+        <!-- Simulated CMS UI -->
+        <div class="cms-demo">
+          <div class="cms-demo-bar">
+            <div class="dot dot-r"></div>
+            <div class="dot dot-y"></div>
+            <div class="dot dot-g"></div>
+            <span class="url">your-prevention-site.netlify.app/admin</span>
+          </div>
+          <div class="cms-demo-inner">
+            <div class="cms-sidebar">
+              <p>Content</p>
+              <div class="cms-nav-item active">&#128197; Events &amp; Meetings</div>
+              <div class="cms-nav-item">&#9881;&#65039; Site Settings</div>
+            </div>
+            <div class="cms-content">
+              <h4>Add New Event</h4>
+              <div style="display:grid;grid-template-columns:1fr 1fr;gap:.75rem;">
+                <div class="cms-field">
+                  <label>Event Title</label>
+                  <input type="text" value="Prevention Partnership Meeting" readonly />
+                </div>
+                <div class="cms-field">
+                  <label>Event Type</label>
+                  <select disabled>
+                    <option>Prevention Partnership</option>
+                  </select>
+                </div>
+                <div class="cms-field">
+                  <label>Date</label>
+                  <input type="text" value="2026-04-17" readonly />
+                </div>
+                <div class="cms-field">
+                  <label>Time</label>
+                  <input type="text" value="4:00 PM" readonly />
+                </div>
+                <div class="cms-field" style="grid-column:1/-1;">
+                  <label>Location</label>
+                  <input type="text" value="Town Hall, Room 217" readonly />
+                </div>
+              </div>
+              <div class="cms-save-row">
+                <button class="cms-btn cms-btn-save">Save &amp; Publish</button>
+                <button class="cms-btn cms-btn-cancel">Cancel</button>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div style="margin-top: 1.5rem; display:grid; grid-template-columns: repeat(auto-fill, minmax(260px,1fr)); gap:1rem;">
+          <div class="info-box">
+            <h3>What You Can Update</h3>
+            <ul style="list-style:disc;padding-left:1.25rem;font-size:.875rem;color:var(--text-light);">
+              <li style="margin-bottom:.3rem;">Add or remove any meeting or event</li>
+              <li style="margin-bottom:.3rem;">Change event dates, times, and locations</li>
+              <li style="margin-bottom:.3rem;">Post an announcement banner on the homepage</li>
+              <li style="margin-bottom:.3rem;">Changes go live within seconds — no waiting</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h3>How It Works</h3>
+            <ul style="list-style:disc;padding-left:1.25rem;font-size:.875rem;color:var(--text-light);">
+              <li style="margin-bottom:.3rem;">Log in with your email at <strong>/admin</strong></li>
+              <li style="margin-bottom:.3rem;">Fill out a form — just like editing a Google Doc</li>
+              <li style="margin-bottom:.3rem;">Click "Publish" — done</li>
+              <li style="margin-bottom:.3rem;">No passwords to memorize — login link sent to email</li>
+            </ul>
+          </div>
+          <div class="info-box">
+            <h3>Bigger Updates?</h3>
+            <ul style="list-style:disc;padding-left:1.25rem;font-size:.875rem;color:var(--text-light);">
+              <li style="margin-bottom:.3rem;">New pages, photos, or program changes</li>
+              <li style="margin-bottom:.3rem;">Design updates or seasonal refreshes</li>
+              <li style="margin-bottom:.3rem;">Adding new resource links</li>
+              <li style="margin-bottom:.3rem;">That's what the retainer covers</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- RETAINER TIERS -->
+    <section class="section section-alt">
+      <div class="container">
+        <div class="section-header">
+          <h2>Ongoing Support &amp; Maintenance</h2>
+          <p>The site is built. A monthly retainer keeps it maintained, updated, and working — so you can focus on the work, not the technology.</p>
+        </div>
+
+        <div class="tier-grid">
+
+          <div class="tier-card">
+            <div class="tier-header">
+              <h3>Basic Hosting</h3>
+              <div class="tier-price"><sup>$</sup>0<span>/mo</span></div>
+            </div>
+            <div class="tier-body">
+              <ul class="tier-features">
+                <li>Site hosted free on Netlify</li>
+                <li>CMS admin panel included</li>
+                <li>You manage all content updates</li>
+                <li>Email support for how-to questions</li>
+              </ul>
+              <p style="font-size:.82rem;color:var(--text-light);">Good if you're comfortable logging in to the CMS and handling events yourself.</p>
+            </div>
+          </div>
+
+          <div class="tier-card featured">
+            <div class="tier-header">
+              <span class="badge-recommended">Recommended</span>
+              <h3>Managed Retainer</h3>
+              <div class="tier-price"><sup>$</sup>95<span>/mo</span></div>
+            </div>
+            <div class="tier-body">
+              <ul class="tier-features">
+                <li>Everything in Basic</li>
+                <li>Monthly event calendar updates</li>
+                <li>Up to 2 hrs of content or design changes per month</li>
+                <li>Quick-turn updates (within 24 hrs)</li>
+                <li>Annual design refresh</li>
+                <li>Priority email &amp; phone support</li>
+                <li>Monthly check-in call (optional)</li>
+              </ul>
+              <a href="mailto:drew@example.com" class="btn btn-accent" style="width:100%;text-align:center;display:block;margin-top:0.5rem;">Get Started</a>
+            </div>
+          </div>
+
+          <div class="tier-card">
+            <div class="tier-header">
+              <h3>Full-Service</h3>
+              <div class="tier-price"><sup>$</sup>175<span>/mo</span></div>
+            </div>
+            <div class="tier-body">
+              <ul class="tier-features">
+                <li>Everything in Managed</li>
+                <li>Up to 5 hrs of updates/month</li>
+                <li>New pages or major content additions</li>
+                <li>Photo editing &amp; image optimization</li>
+                <li>Event flyer design (1/month)</li>
+                <li>Social media graphics (2/month)</li>
+                <li>Analytics report monthly</li>
+              </ul>
+              <a href="mailto:drew@example.com" class="btn btn-outline" style="width:100%;text-align:center;display:block;margin-top:0.5rem;">Inquire</a>
+            </div>
+          </div>
+
+        </div>
+
+        <p style="margin-top:1.5rem;font-size:.85rem;color:var(--text-light);text-align:center;">Prices are flexible. Grant-funded organizations and town departments often qualify for adjusted rates &mdash; happy to discuss.</p>
+      </div>
+    </section>
+
+    <!-- NEXT STEPS -->
+    <section class="section">
+      <div class="container">
+        <div class="section-header">
+          <h2>Next Steps</h2>
+          <p>Getting from demo to live takes less than a week.</p>
+        </div>
+
+        <div class="step-list" style="max-width:640px;">
+          <div class="step-item">
+            <div class="step-num">1</div>
+            <div class="step-content">
+              <h4>Review the demo site</h4>
+              <p>Click through the pages. Note anything you'd like changed — copy, programs, colors, layout. This is a starting point, not a finished product.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">2</div>
+            <div class="step-content">
+              <h4>Confirm the content</h4>
+              <p>I'll need a few details: correct meeting dates, any program descriptions you'd like updated, staff bios, and whether you have photos to add.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">3</div>
+            <div class="step-content">
+              <h4>Choose a domain (optional)</h4>
+              <p>The site can live at a free Netlify URL (e.g. <em>weha-prevention.netlify.app</em>) or a custom domain like <em>wehaprevention.org</em> (~$15/yr). Custom domains look more professional for flyers and outreach.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">4</div>
+            <div class="step-content">
+              <h4>Go live</h4>
+              <p>Once content is confirmed, the site is deployed to Netlify, your admin login is set up, and I walk you through using the CMS. Usually same or next day.</p>
+            </div>
+          </div>
+          <div class="step-item">
+            <div class="step-num">5</div>
+            <div class="step-content">
+              <h4>Choose a support plan (optional)</h4>
+              <p>If you'd like ongoing help managing the site, we set up a simple monthly arrangement. No long-term contract — cancel anytime.</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="info-box" style="max-width:640px;margin-top:2rem;">
+          <h3>Questions? Let's talk.</h3>
+          <p>This demo was built as a proof of concept. Happy to adjust anything — colors, copy, page structure — before a final version is deployed.</p>
+          <div style="margin-top:1rem;display:flex;gap:.75rem;flex-wrap:wrap;">
+            <a href="index.html" class="btn btn-primary btn-sm">View the Demo Site</a>
+            <a href="contact.html" class="btn btn-outline btn-sm">Send a Message</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Minimal footer for pitch page -->
+  <div style="background:var(--navy-dark);text-align:center;padding:1.5rem;font-size:.8rem;color:rgba(255,255,255,.45);">
+    <p>Prepared for Gretchen Levitz &mdash; West Hartford Prevention Partnership &mdash; 2026</p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
