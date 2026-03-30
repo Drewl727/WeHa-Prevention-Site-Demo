@@ -1096,6 +1096,324 @@ h4 { font-size: 1rem; }
 }
 
 /* =============================================
+   FACT CAMPAIGN BANNER
+   ============================================= */
+.fact-campaign {
+  background: var(--navy);
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+}
+
+.fact-campaign::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(212,168,67,0.12) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+.fact-campaign-inner {
+  max-width: 740px;
+  position: relative;
+  z-index: 1;
+}
+
+.fact-campaign-eyebrow {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy-dark);
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.3rem 0.8rem;
+  border-radius: 2px;
+  margin-bottom: 1rem;
+}
+
+.fact-campaign h2 {
+  color: var(--white);
+  font-size: 2rem;
+  margin-bottom: 0.4rem;
+  line-height: 1.2;
+}
+
+.fact-campaign-subtitle {
+  color: var(--gold);
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin-bottom: 1.25rem;
+  font-style: italic;
+}
+
+.fact-campaign p {
+  color: rgba(255,255,255,0.82);
+  font-size: 0.975rem;
+  line-height: 1.75;
+  margin-bottom: 1.5rem;
+}
+
+.fact-campaign-accent {
+  width: 48px;
+  height: 4px;
+  background: var(--gold);
+  border-radius: 2px;
+  margin-bottom: 1.25rem;
+}
+
+/* =============================================
+   SOCIAL MEDIA / STAY CONNECTED
+   ============================================= */
+.social-section {
+  background: var(--gray-light);
+  padding: 3.5rem 0;
+}
+
+.social-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.social-card {
+  background: var(--white);
+  border-radius: var(--radius);
+  border: 1px solid var(--gray-mid);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.social-card-header {
+  padding: 1rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  border-bottom: 1px solid var(--gray-mid);
+}
+
+.social-icon {
+  width: 40px;
+  height: 40px;
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-weight: 700;
+  font-size: 0.85rem;
+  color: #fff;
+}
+
+.social-icon.facebook { background: #1877F2; }
+.social-icon.instagram { background: linear-gradient(135deg, #f09433 0%, #e6683c 25%, #dc2743 50%, #cc2366 75%, #bc1888 100%); }
+
+.social-card-header-text strong {
+  display: block;
+  font-size: 0.9rem;
+  color: var(--navy);
+}
+
+.social-card-header-text span {
+  font-size: 0.78rem;
+  color: var(--text-light);
+}
+
+.social-card-body {
+  padding: 1.25rem;
+  min-height: 180px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  background: var(--gray-light);
+}
+
+.social-coming-soon {
+  display: inline-block;
+  background: var(--navy);
+  color: var(--white);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  margin-bottom: 0.75rem;
+}
+
+.social-card-body p {
+  font-size: 0.85rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+.social-card-footer {
+  padding: 0.875rem 1.25rem;
+  border-top: 1px solid var(--gray-mid);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.social-card-footer a {
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.social-handle {
+  font-size: 0.8rem;
+  color: var(--text-light);
+}
+
+/* Facebook feed placeholder */
+.fb-feed-placeholder {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.fb-post-stub {
+  background: var(--white);
+  border-radius: var(--radius);
+  padding: 0.75rem;
+  border: 1px solid var(--gray-mid);
+  text-align: left;
+}
+
+.fb-post-stub-bar {
+  height: 8px;
+  background: var(--gray-mid);
+  border-radius: 4px;
+  margin-bottom: 0.4rem;
+}
+
+.fb-post-stub-bar.short { width: 60%; }
+
+/* =============================================
+   RESOURCE MAP PLACEHOLDER
+   ============================================= */
+.map-section {
+  margin-top: 2.5rem;
+  background: var(--white);
+  border: 1px solid var(--gray-mid);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+}
+
+.map-section-header {
+  background: var(--navy);
+  padding: 1.4rem 1.75rem;
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+}
+
+.map-icon-badge {
+  width: 44px;
+  height: 44px;
+  background: var(--gold);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+  font-size: 1.2rem;
+}
+
+.map-section-header-text h3 {
+  color: var(--white);
+  font-size: 1.15rem;
+  margin-bottom: 0.2rem;
+}
+
+.map-section-header-text p {
+  color: rgba(255,255,255,0.72);
+  font-size: 0.85rem;
+  margin: 0;
+}
+
+.map-placeholder-body {
+  padding: 0;
+  position: relative;
+}
+
+.map-placeholder-graphic {
+  height: 240px;
+  background: #e8edf2;
+  background-image:
+    linear-gradient(rgba(27,58,92,0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(27,58,92,0.06) 1px, transparent 1px);
+  background-size: 32px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  gap: 0.75rem;
+  color: #9ab;
+  position: relative;
+}
+
+.map-placeholder-graphic::before {
+  content: '';
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  background: rgba(27,58,92,0.08);
+  border: 3px dashed rgba(27,58,92,0.2);
+  display: block;
+}
+
+.map-pin-group {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+.map-pin {
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: var(--navy);
+  opacity: 0.25;
+}
+
+.map-placeholder-caption {
+  padding: 1.25rem 1.75rem;
+  border-top: 1px solid var(--gray-mid);
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+.map-coming-soon-badge {
+  display: inline-block;
+  background: var(--gold);
+  color: var(--navy-dark);
+  font-size: 0.7rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  white-space: nowrap;
+  flex-shrink: 0;
+  margin-top: 0.1rem;
+}
+
+.map-placeholder-caption p {
+  font-size: 0.875rem;
+  color: var(--text-light);
+  margin: 0;
+}
+
+/* =============================================
    RESPONSIVE — MOBILE (max 768px)
    ============================================= */
 @media (max-width: 768px) {
