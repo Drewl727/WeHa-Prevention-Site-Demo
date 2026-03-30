@@ -1,0 +1,8 @@
+{
+  "images": [
+    { "src": "https://picsum.photos/seed/weha1/1400/700", "alt": "Community event in West Hartford" },
+    { "src": "https://picsum.photos/seed/weha2/1400/700", "alt": "West Hartford neighborhood" },
+    { "src": "https://picsum.photos/seed/weha3/1400/700", "alt": "Community members gathering" },
+    { "src": "https://picsum.photos/seed/weha4/1400/700", "alt": "Prevention Partnership event" }
+  ]
+}

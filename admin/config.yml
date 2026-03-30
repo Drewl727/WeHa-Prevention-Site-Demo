@@ -68,6 +68,28 @@ collections:
             hint: "A brief description shown on the events page."
 
   # ─────────────────────────────────────────
+  # HERO SLIDESHOW — Homepage background photos
+  # ─────────────────────────────────────────
+  - name: "hero_images"
+    label: "Hero Slideshow"
+    file: "data/hero-images.json"
+    description: "Upload photos for the homepage hero background slideshow. Landscape photos work best (min 1200px wide)."
+    fields:
+      - label: "Images"
+        name: "images"
+        widget: "list"
+        summary: "{{fields.alt}}"
+        fields:
+          - label: "Photo"
+            name: "src"
+            widget: "image"
+            hint: "Upload a photo — landscape orientation works best"
+          - label: "Alt Text"
+            name: "alt"
+            widget: "string"
+            hint: "Brief description, e.g. 'Community event at Town Hall'"
+
+  # ─────────────────────────────────────────
   # ANNOUNCEMENTS — Homepage banner notices
   # ─────────────────────────────────────────
   - name: "settings"

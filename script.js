@@ -119,6 +119,79 @@ document.addEventListener('DOMContentLoaded', function () {
       });
   };
 
+  // ── Hero slideshow ────────────────────────────────
+  var slidesContainer = document.getElementById('hero-slides');
+  if (slidesContainer) {
+    var base3 = document.querySelector('base') ? document.querySelector('base').href : '';
+    var heroPath = base3 ? base3 + 'data/hero-images.json' : 'data/hero-images.json';
+
+    fetch(heroPath)
+      .then(function (res) { return res.json(); })
+      .then(function (data) {
+        var images = (data.images || []).filter(function (img) { return img && img.src; });
+        if (images.length === 0) return;
+
+        // Build slides — all start off-right except the first
+        images.forEach(function (img, i) {
+          var slide = document.createElement('div');
+          slide.className = i === 0 ? 'hero-slide active' : 'hero-slide slide-right';
+          slide.style.backgroundImage = 'url(' + esc(img.src) + ')';
+          if (img.alt) { slide.setAttribute('role', 'img'); slide.setAttribute('aria-label', img.alt); }
+          slidesContainer.appendChild(slide);
+        });
+
+        if (images.length < 2) return;
+
+        // Build dots and append to hero section
+        var dotsEl = document.createElement('div');
+        dotsEl.className = 'hero-dots';
+        dotsEl.setAttribute('aria-label', 'Slideshow navigation');
+        images.forEach(function (img, i) {
+          var dot = document.createElement('button');
+          dot.className = i === 0 ? 'hero-dot active' : 'hero-dot';
+          dot.setAttribute('aria-label', 'Photo ' + (i + 1));
+          dot.addEventListener('click', function () { goTo(i); });
+          dotsEl.appendChild(dot);
+        });
+        slidesContainer.parentElement.appendChild(dotsEl);
+
+        var current = 0;
+        var timer = null;
+
+        function goTo(next) {
+          if (next === current) return;
+          var slides = slidesContainer.querySelectorAll('.hero-slide');
+          var dots   = dotsEl.querySelectorAll('.hero-dot');
+          var dir    = next > current ? 1 : -1;
+
+          // Snap incoming slide to correct off-screen side without animating
+          slides[next].style.transition = 'none';
+          slides[next].classList.remove('active', 'slide-left', 'slide-right');
+          slides[next].classList.add(dir > 0 ? 'slide-right' : 'slide-left');
+          slides[next].getBoundingClientRect(); // force reflow
+
+          // Animate both slides simultaneously
+          slides[next].style.transition = '';
+          slides[current].classList.remove('active');
+          slides[current].classList.add(dir > 0 ? 'slide-left' : 'slide-right');
+          slides[next].classList.remove('slide-left', 'slide-right');
+          slides[next].classList.add('active');
+
+          dots[current].classList.remove('active');
+          dots[next].classList.add('active');
+          current = next;
+
+          clearInterval(timer);
+          timer = setInterval(advance, 4500);
+        }
+
+        function advance() { goTo((current + 1) % images.length); }
+
+        timer = setInterval(advance, 4500);
+      })
+      .catch(function () { /* no images — solid navy shows as fallback */ });
+  }
+
   // ── Announcement banner ───────────────────────────
   var announcementBanner = document.getElementById('announcement-banner');
   if (announcementBanner) {
