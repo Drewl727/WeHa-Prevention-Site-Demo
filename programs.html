@@ -17,8 +17,18 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <div class="email-banner">
     <p>Stay informed — <a href="https://lp.constantcontactpages.com/sl/iolsR2A" target="_blank" rel="noopener">sign up for email updates</a> from the Prevention Partnership.</p>
@@ -57,12 +67,38 @@
     </div>
   </div>
 
-  <main>
+  <main id="main-content">
     <section class="section">
       <div class="container">
 
         <div class="notice">
           For more information about any program, contact <strong>Gretchen Levitz</strong> at <a href="tel:8605617571">860-561-7571</a> or <a href="mailto:gretchen.levitz@westhartfordct.gov">gretchen.levitz@westhartfordct.gov</a>.
+        </div>
+
+        <!-- FACT CAMPAIGN -->
+        <div class="program-entry" id="fact">
+          <div class="program-entry-header">
+            <div class="prog-num">FACT</div>
+            <div class="program-entry-header-text">
+              <h2>FACT Campaign</h2>
+              <p class="program-tagline">Fostering Awareness, Connection &amp; Truth</p>
+            </div>
+          </div>
+          <div class="program-entry-body">
+            <p>The FACT Campaign is a community-wide youth prevention initiative that brings together schools, families, faith communities, and local organizations around a shared commitment to honest conversation, meaningful connection, and evidence-based prevention. FACT equips West Hartford youth with the truth about substances, mental health, and the power of community — before they face high-risk situations alone.</p>
+            <p>Rooted in the understanding that connection is one of the strongest protective factors against substance misuse, the FACT Campaign creates ongoing opportunities for youth to hear accurate information, build trusted relationships with adults, and develop the skills and confidence to make healthy choices.</p>
+
+            <h4>What FACT Does</h4>
+            <ul>
+              <li>Delivers evidence-based prevention messaging in schools and community settings</li>
+              <li>Engages families through education sessions and take-home resources</li>
+              <li>Trains school staff, coaches, and youth-serving adults as trusted messengers</li>
+              <li>Coordinates prevention efforts across faith communities, schools, and Town organizations</li>
+              <li>Promotes honest conversation about substances and mental health without stigma</li>
+            </ul>
+
+            <p style="margin-top: 1rem;"><a href="contact.html" class="btn btn-outline btn-sm">Learn More About FACT</a></p>
+          </div>
         </div>
 
         <!-- ELEVATE WEHA -->

@@ -43,6 +43,24 @@ body {
   -webkit-font-smoothing: antialiased;
 }
 
+/* Skip to main content — WCAG 2.1 AA */
+.skip-link {
+  position: absolute;
+  top: -9999px;
+  left: 1rem;
+  background: var(--navy);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  border-radius: var(--radius);
+  font-size: 0.875rem;
+  font-weight: 600;
+  z-index: 10000;
+  text-decoration: none;
+}
+.skip-link:focus {
+  top: 0.5rem;
+}
+
 img { max-width: 100%; height: auto; display: block; }
 
 a { color: var(--navy); }

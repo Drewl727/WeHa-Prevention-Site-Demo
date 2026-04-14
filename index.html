@@ -21,8 +21,18 @@
   <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="styles.css" />
+
+  <!-- Google Analytics GA4 — replace G-XXXXXXXXXX with your Measurement ID -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+    gtag('config', 'G-XXXXXXXXXX');
+  </script>
 </head>
 <body>
+  <a href="#main-content" class="skip-link">Skip to main content</a>
 
   <!-- ANNOUNCEMENT BANNER (managed via CMS) -->
   <div id="announcement-banner" style="display:none; background: #1B3A5C; color: #fff; text-align: center; padding: 0.6rem 1.5rem; font-size: 0.875rem; font-weight: 600;"></div>
@@ -60,7 +70,7 @@
     </div>
   </header>
 
-  <main>
+  <main id="main-content">
 
     <!-- HERO -->
     <section class="hero">
@@ -176,7 +186,7 @@
           <p class="fact-campaign-subtitle">Fostering Awareness, Connection &amp; Truth</p>
           <div class="fact-campaign-accent"></div>
           <p>The FACT Campaign is a community-wide youth prevention initiative that brings together schools, families, faith communities, and local organizations around a shared commitment to honest conversation, meaningful connection, and evidence-based prevention. FACT equips West Hartford youth with the truth about substances, mental health, and the power of community — before they face high-risk situations alone.</p>
-          <a href="programs.html" class="btn btn-accent">Learn About FACT</a>
+          <a href="programs.html#fact" class="btn btn-accent">Learn About FACT</a>
         </div>
       </div>
     </section>
