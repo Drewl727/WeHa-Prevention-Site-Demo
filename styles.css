@@ -725,6 +725,7 @@ h4 { font-size: 1rem; }
   overflow: hidden;
   margin-bottom: 2rem;
   border: 1px solid var(--gray-mid);
+  scroll-margin-top: 86px; /* sticky header (70px) + 16px breathing room */
 }
 
 .program-entry-header {
@@ -799,6 +800,7 @@ h4 { font-size: 1rem; }
   background: var(--gray-light);
   border-left: 4px solid var(--gold);
   border-radius: 0 var(--radius) var(--radius) 0;
+  scroll-margin-top: 86px;
   padding: 1.25rem 1.5rem;
   margin-top: 1.25rem;
 }
